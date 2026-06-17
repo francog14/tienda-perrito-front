@@ -5,6 +5,8 @@ on:
     branches: [ "main" ]
     paths:
       - "frontend/**"
+      - ".github/workflows/**"
+      - ".aws/**"
   workflow_dispatch:
 
 env:
@@ -20,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout codigo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configurar credenciales AWS
         uses: aws-actions/configure-aws-credentials@v4
